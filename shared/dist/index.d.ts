@@ -1,0 +1,20 @@
+import { z } from "zod";
+export declare const GSPaperEnum: any;
+export type GSPaper = z.infer<typeof GSPaperEnum>;
+export declare const CategoryEnum: any;
+export type Category = z.infer<typeof CategoryEnum>;
+export declare const EdgeSchema: any;
+export type Edge = z.infer<typeof EdgeSchema>;
+export declare const NodeSchema: any;
+export type Node = z.infer<typeof NodeSchema>;
+export declare const MapSchema: any;
+export type MindMap = z.infer<typeof MapSchema>;
+export declare const GenerateRequestSchema: any;
+export type GenerateRequest = z.infer<typeof GenerateRequestSchema>;
+export declare const SummaryResponseSchema: any;
+export type SummaryResponse = z.infer<typeof SummaryResponseSchema>;
+export declare const ProjectSchema: any;
+export type Project = z.infer<typeof ProjectSchema>;
+export declare const CATEGORY_COLORS: Record<Category, string>;
+export declare function createMockMap(topic?: string): MindMap;
+//# sourceMappingURL=index.d.ts.map
