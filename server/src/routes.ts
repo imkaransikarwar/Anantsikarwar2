@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { z } from "zod";
 import { GenerateRequestSchema, MapSchema, ProjectSchema, createMockMap } from "@shared/types";
+import { randomUUID } from "crypto";
 
 const router = Router();
 
@@ -28,7 +29,7 @@ router.post("/projects", (req, res) => {
   const body = req.body;
   const now = new Date().toISOString();
   const project = {
-    _id: crypto.randomUUID(),
+    _id: randomUUID(),
     userId: body.userId || "guest",
     title: body.title || body.topic || "Untitled",
     topic: body.topic || "Topic",
